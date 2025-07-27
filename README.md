@@ -1,4 +1,4 @@
-# Active Directory Mindmap 2025
+# Active Directory 2025
 
 This repository provides a structured view of Active Directory (AD) attack and defense techniques 
 
