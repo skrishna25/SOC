@@ -1,125 +1,115 @@
-Active Directory Fundamentals
+# Active Directory Fundamentals
+
 This document explains the key concepts and structure of Active Directory used for identity and access management in enterprise Windows environments.
 
-Table of Contents
-What is Active Directory
+## Table of Contents
 
-Core Components
+- [What is Active Directory](#what-is-active-directory)
+- [Core Components](#core-components)
+  - [Domain](#domain)
+  - [Domain Controller](#domain-controller)
+  - [Forest](#forest)
+  - [Tree](#tree)
+  - [Organizational Units](#organizational-units)
+  - [Global Catalog](#global-catalog)
+  - [Schema](#schema)
+  - [Sites](#sites)
+- [Key Concepts](#key-concepts)
+  - [LDAP](#ldap)
+  - [Kerberos Authentication](#kerberos-authentication)
+  - [Group Policy](#group-policy)
+  - [Trust Relationships](#trust-relationships)
+  - [Replication](#replication)
+- [Common AD Objects](#common-ad-objects)
+- [AD Administrative Tools](#ad-administrative-tools)
+- [Importance of Active Directory](#importance-of-active-directory)
+- [References](#references)
 
-Domain
+## What is Active Directory
 
-Domain Controller
+Active Directory is a centralized directory service from Microsoft used to manage identities, authentication, and access control. It organizes and stores information about network objects such as users, computers, and services.
 
-Forest
+## Core Components
 
-Tree
+### Domain
 
-Organizational Units
+A domain is a collection of objects that share the same AD database. It defines administrative boundaries for policies and authentication.
 
-Global Catalog
+### Domain Controller
 
-Schema
+A server that stores the AD database and handles login requests and directory lookups.
 
-Sites
+### Forest
 
-Key Concepts
+The top-level container that holds one or more domain trees with a shared schema and global catalog.
 
-LDAP
+### Tree
 
-Kerberos Authentication
+A set of one or more domains that share a common namespace. Trees in the same forest trust each other.
 
-Group Policy
+### Organizational Units
 
-Trust Relationships
+OUs are containers within domains used to group and organize objects. Administrators use OUs for applying policies and delegating permissions.
 
-Replication
+### Global Catalog
 
-Common AD Objects
+A searchable directory that stores a subset of data from all domains in the forest. It enables cross-domain searches.
 
-AD Administrative Tools
+### Schema
 
-Importance of Active Directory
+The schema defines the types of objects and attributes stored in Active Directory. It is replicated across all domain controllers.
 
-References
+### Sites
 
-What is Active Directory
-Active Directory is a centralized directory service developed by Microsoft for Windows domain networks. It manages identities, authenticates users, and controls access to resources.
+Sites reflect the physical layout of the network. They help control replication traffic and manage authentication based on location.
 
-Core Components
-Domain
-A domain is a logical grouping of network objects such as users, computers, and devices. It defines administrative boundaries for authentication and policy application.
+## Key Concepts
 
-Domain Controller
-A domain controller is a server that hosts a copy of the Active Directory database and handles authentication requests.
+### LDAP
 
-Forest
-A forest is the top-most container in Active Directory that holds one or more domain trees. All domains in a forest share a common schema and global catalog.
+Lightweight Directory Access Protocol is used by clients to interact with Active Directory.
 
-Tree
-A tree is a hierarchical arrangement of domains that share a contiguous namespace within a forest.
+### Kerberos Authentication
 
-Organizational Units
-Organizational Units (OUs) are containers used to organize users, groups, and computers. OUs allow delegation of administration and application of group policies.
+The primary authentication protocol used in Active Directory for secure logins.
 
-Global Catalog
-The global catalog is a distributed data repository that contains a searchable subset of all objects in the forest. It enables users to locate resources across domains.
+### Group Policy
 
-Schema
-The schema defines the objects and attributes that the directory can contain. It is consistent and replicated across all domain controllers.
+Group Policy enables centralized configuration of user and computer settings across the domain.
 
-Sites
-Sites represent the physical structure of the network. They are used to optimize replication and authentication traffic based on geographical topology.
+### Trust Relationships
 
-Key Concepts
-LDAP
-Lightweight Directory Access Protocol (LDAP) is the protocol used by Active Directory clients to query and modify directory services.
+Trusts allow users in one domain to access resources in another. Trusts can be one-way or two-way, and transitive or non-transitive.
 
-Kerberos Authentication
-Kerberos is the default authentication protocol in Active Directory, providing secure authentication using tickets.
+### Replication
 
-Group Policy
-Group Policy allows administrators to define settings and configurations for users and computers in the domain.
+Domain controllers replicate data to stay in sync. Replication can occur within and across sites.
 
-Trust Relationships
-Trusts are logical links between domains that allow users in one domain to access resources in another. Trusts can be one-way or two-way, and transitive or non-transitive.
+## Common AD Objects
 
-Replication
-Replication ensures that all domain controllers share the same directory data. It keeps the Active Directory database synchronized.
+- **Users**: Individual user accounts
+- **Groups**: Collections of users for simplified permissions
+- **Computers**: Devices joined to the domain
+- **Printers**: Network printers managed via AD
 
-Common AD Objects
-Users: Individual user accounts for authentication and access control
+## AD Administrative Tools
 
-Groups: Collections of user accounts used to simplify permissions
+- **Active Directory Users and Computers**: Manage users, groups, and computers
+- **Active Directory Domains and Trusts**: Manage trust relationships
+- **Active Directory Sites and Services**: Configure replication and sites
+- **Group Policy Management Console**: Administer Group Policy Objects
 
-Computers: Devices joined to the domain
+## Importance of Active Directory
 
-Printers: Shared printers managed within AD
+- Centralized identity and access management
+- Scalable for enterprise environments
+- Supports single sign-on
+- Enables policy-based administration
 
-AD Administrative Tools
-Active Directory Users and Computers: Used for managing users, groups, and computers
+## References
 
-Active Directory Domains and Trusts: Used for managing trust relationships
-
-Active Directory Sites and Services: Used to manage site topology and replication
-
-Group Policy Management Console: Used to create and manage Group Policy Objects (GPOs)
-
-Importance of Active Directory
-Centralized identity and access management
-
-Policy-based administration across the organization
-
-Single sign-on (SSO) capability
-
-Scalable and reliable directory infrastructure
-
-References
-https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/active-directory-domain-services-overview
-
-https://ldap.com/ldapv3-wire-protocol-reference/
-
-https://learn.microsoft.com/en-us/windows-server/security/kerberos/kerberos-authentication-overview
-
-https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/group-policy
-
-https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/active-directory-logical-structure
+- [Active Directory Domain Services Overview](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/active-directory-domain-services-overview)
+- [LDAP Wire Protocol Reference](https://ldap.com/ldapv3-wire-protocol-reference/)
+- [Kerberos Authentication Overview](https://learn.microsoft.com/en-us/windows-server/security/kerberos/kerberos-authentication-overview)
+- [Group Policy Documentation](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/group-policy)
+- [Logical Structure of Active Directory](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/active-directory-logical-structure)
