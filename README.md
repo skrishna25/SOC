@@ -1,64 +1,67 @@
-# Active Directory 2025
+# Active Directory Security Knowledgebase
 
-This repository provides a structured view of Active Directory (AD) attack and defense techniques 
+This repository is a curated collection of knowledge, techniques, and workflows for working with and securing Active Directory (AD). It is designed for a wide range of audiences including:
 
----
+- SOC Analysts and Incident Responders
+- Red and Blue Teams
+- Security Engineers and Admins
+- Students and Learners
 
-## Overview
-
-The AD Mindmap 2025 outlines key domains in securing or attacking an Active Directory environment, mapped across tactics such as:
-
-- Initial Access
-- Account Discovery
-- Credential Access
-- Privilege Escalation
-- Lateral Movement
-- Persistence
-- Defense Evasion
-- Domain Reconnaissance
-
-This Markdown version supports red, blue, and purple teams in understanding TTPs (Tactics, Techniques, and Procedures), aligned with real-world attack paths.
+Whether you're starting with AD fundamentals or analyzing advanced attack paths, this repository provides structured, actionable content aligned with modern threats and real-world practices.
 
 ---
 
-## File Structure
+## Repository Structure
 
 | File | Description |
 |------|-------------|
-| `AD-Basics.md` | Foundational concepts and components of Active Directory |
-| `AD-Monitoring Guide.md` | Monitoring practices for AD using native and external tools |
-| `AD-Monitoring_Advanced.md` | Advanced monitoring techniques for SOC teams |
-| `AD-SOC Bestpractices.md` | Operational and security best practices for AD in enterprise SOCs |
-| `AD-Mindmap_2025.md` | Structured representation of the AD attack surface (based on the 2025 mindmap) |
+| **AD-Basics.md** | Core AD concepts, architecture, and components — ideal for beginners |
+| **AD-Monitoring Guide.md** | Key AD monitoring tasks, logs, and detection strategies for blue teams |
+| **AD-Monitoring_Advanced.md** | Deep-dive into advanced monitoring, detection logic, and SIEM integration |
+| **AD-SOC Bestpractices.md** | Operational security and monitoring best practices for SOC teams managing AD |
+| **AD-Mindmap_2025.md** | Structured version of Orange Cyberdefense’s 2025 mindmap — covering tactics from initial access to persistence |
 
 ---
 
-## Preview
+## What You’ll Learn
 
-For a visual reference, the original mindmap is available as an SVG:  
-[AD Mindmap 2025 - Orange Cyberdefense (SVG)](https://orange-cyberdefense.github.io/ocd-mindmaps/img/mindmap_ad_dark_classic_2025.03.excalidraw.svg)
-
----
-
-## Use Cases
-
-- Red Team enumeration planning  
-- Blue Team detection coverage mapping  
-- Purple Team adversary emulation  
-- SOC analyst training and onboarding  
-- Cybersecurity learning and teaching
+- AD attack techniques and how attackers exploit domain environments
+- How to detect and monitor common attack paths using logs and tools
+- Privilege escalation methods and how to prevent or alert on them
+- Best practices for securing AD in enterprise environments
+- Real-world mappings to MITRE ATT&CK and other threat models
 
 ---
 
-## Credits
+## Visual Reference
+
+You can view the original mindmap from Orange Cyberdefense for a high-level overview of AD security:
+
+**[AD Mindmap 2025 (SVG)](https://orange-cyberdefense.github.io/ocd-mindmaps/img/mindmap_ad_dark_classic_2025.03.excalidraw.svg)**
+
+---
+
+## Who Should Use This Repository
+
+- **Red Teamers**: Plan attacks, understand AD internals, map lateral movement paths
+- **Blue Teamers**: Build detections, monitor logs, audit security events
+- **Purple Teams**: Emulate attackers and measure defensive coverage
+- **SOC Analysts**: Onboard quickly into AD alerting, logging, and triage
+- **Students**: Learn AD from the ground up with practical structure
+
+---
+
+## Contributions
+
+Feel free to contribute improvements, fixes, or new insights. Open a pull request with proper context and reference.
+
+---
+
+## License and Credit
 
 - **Mindmap Source**: [Orange Cyberdefense](https://github.com/Orange-Cyberdefense/ocd-mindmaps)
-- **SVG Rendering Tool**: `excalimap`
+- **Markdown Version**: Adapted and expanded for educational and operational use.
+
+Check the original mindmap repository for license terms if redistributing the visual content.
 
 ---
-
-## License
-
-Refer to the original license in [Orange-Cyberdefense/ocd-mindmaps](https://github.com/Orange-Cyberdefense/ocd-mindmaps) if redistributing or modifying the visual mindmap.
-
-This Markdown adaptation is shared under the same open-use spirit for educational and operational purposes.
