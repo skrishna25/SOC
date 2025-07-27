@@ -1,0 +1,110 @@
+# Active Directory Mindmap 2025
+
+This document outlines key areas of Active Directory attack and defense techniques. It is based on the 2025 version of the mindmap created by Orange Cyberdefense and formatted as Markdown for easy version control and readability.
+
+## Table of Contents
+
+- [Initial Access](#initial-access)
+- [Account Discovery](#account-discovery)
+- [Credential Access](#credential-access)
+- [Privilege Escalation](#privilege-escalation)
+- [Lateral Movement](#lateral-movement)
+- [Persistence](#persistence)
+- [Defense Evasion](#defense-evasion)
+- [Domain Understanding and Recon](#domain-understanding-and-recon)
+- [How This Was Generated](#how-this-was-generated)
+- [Source and License](#source-and-license)
+
+---
+
+## Initial Access
+
+- Phishing (spear-phishing attachments or links)
+- Exploiting exposed services (e.g., RDP, VPN, web services)
+- Active Directory Certificate Services (AD CS) abuse
+- SCCM / MECM abuse
+
+---
+
+## Account Discovery
+
+- Querying user and group membership via LDAP or PowerShell
+- Extracting SPNs for Kerberoasting
+- Using tools like BloodHound or ADFind
+
+---
+
+## Credential Access
+
+- Kerberoasting via TGS requests
+- Brute force and password spraying
+- DCSync requests
+- LSASS memory dumping (e.g., Mimikatz, Dumpert)
+- NTDS.dit and backup file exfiltration
+
+---
+
+## Privilege Escalation
+
+- Abusing ACLs on AdminSDHolder container
+- Group Policy Object (GPO) abuse to elevate privileges or persist
+- Exploiting trust relationships between domains
+- Active Directory Certificate Services escalation
+
+---
+
+## Lateral Movement
+
+- WMI execution and remote PowerShell
+- PsExec, WMIC, and remote scheduled tasks
+- Pass-the-hash and pass-the-ticket techniques
+- Remote service creation and remote code execution
+
+---
+
+## Persistence
+
+- Golden Ticket generation and reuse
+- Skeleton Key implant in LSASS memory
+- Creating backdoor service accounts
+- Scheduled tasks configured for persistence
+
+---
+
+## Defense Evasion
+
+- Clearing or tampering with security logs
+- Deactivating auditing policies or log forwarding
+- Modifying SID history on user accounts
+- Hiding malicious accounts or C2 activity
+
+---
+
+## Domain Understanding and Recon
+
+- Site enumeration and replication topology discovery
+- Identifying trust relationships between domains
+- Global Catalog and DNS information gathering
+- Enumerating FSMO roles and domain controller configuration
+
+---
+
+## How This Was Generated
+
+This mindmap is maintained by Orange Cyberdefense and generated from Markdown using the `excalimap` tool.
+
+- Source files are written in Markdown
+- Rendered into diagrams using Excalidraw
+- Exported as SVG for publishing
+
+Contributions and pull requests are welcome via GitHub.
+
+---
+
+## Source and License
+
+- Original SVG file:  
+  https://orange-cyberdefense.github.io/ocd-mindmaps/img/mindmap_ad_dark_classic_2025.03.excalidraw.svg
+
+- Project repository:  
+  https://github.com/Orange-Cyberdefense/ocd-mindmaps
