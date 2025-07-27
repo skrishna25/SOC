@@ -1,6 +1,6 @@
 # Active Directory Mindmap 2025
 
-This repository provides a structured view of Active Directory (AD) attack and defense techniques as mapped in the [Orange Cyberdefense AD Mindmap 2025](https://orange-cyberdefense.github.io/ocd-mindmaps/img/mindmap_ad_dark_classic_2025.03.excalidraw.svg).
+This repository provides a structured view of Active Directory (AD) attack and defense techniques 
 
 The content is adapted into Markdown format to support easy versioning, collaboration, and learning.
 
