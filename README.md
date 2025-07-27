@@ -2,8 +2,6 @@
 
 This repository provides a structured view of Active Directory (AD) attack and defense techniques 
 
-The content is adapted into Markdown format to support easy versioning, collaboration, and learning.
-
 ---
 
 ## Overview
